@@ -1,0 +1,698 @@
+package oopsdemo2;
+/*
+    Java Program to demonstrate Hierarchical Inheritance
+ */
+
+class Doctor{
+
+    private int idNumber;
+    private String name,address;
+
+    public Doctor(int idNumber, String name, String address) {
+        this.idNumber = idNumber;
+        this.name = name;
+        this.address = address;
+    }
+    public void display() {
+        System.out.println("******** Doctor Details ***********");
+        System.out.println("The Doctor Id is   : "+idNumber);
+        System.out.println("The Doctor Name is : "+name);
+        System.out.println("The Doctor City is : "+address);
+    }
+}
+
+class Specialist extends Doctor{
+
+    private String speciality;
+
+    public Specialist(int idNumber, String name, String address, String speciality) {
+        super(idNumber, name, address);
+        this.speciality = speciality;
+    }
+
+    public void display(){
+        super.display();
+        System.out.println("The Speciality is : "+speciality);
+    }
+}
+
+class NonSpecialist extends Doctor{
+
+    public NonSpecialist(int idNumber, String name, String address) {
+        super(idNumber, name, address);
+    }
+}
+/*
+                        Doctor
+       Specialist                   NonSpecialist
+ */
+public class HierarchicalDemo {
+    public static void main(String[] args) {
+
+        Specialist spObj=new Specialist(1001,"Mary King","New York","Cardiologist");
+        spObj.display();
+
+        NonSpecialist nspObj=new NonSpecialist(2001,"Navin Kumar","Mumbai");
+        nspObj.display();
+
+    }
+}
+
+
+
+
+another
+   
+
+package oopsdemo2;
+/*
+    Java Program to demonstrate Hierarchical Inheritance
+ */
+
+class Doctor{
+
+    private int idNumber;
+    private String name,address;
+
+    public Doctor(int idNumber, String name, String address) {
+        this.idNumber = idNumber;
+        this.name = name;
+        this.address = address;
+    }
+    public void display() {
+        System.out.println("******** Doctor Details ***********");
+        System.out.println("The Doctor Id is   : "+idNumber);
+        System.out.println("The Doctor Name is : "+name);
+        System.out.println("The Doctor City is : "+address);
+    }
+}
+
+class Specialist extends Doctor{
+
+    private String speciality;
+
+    public Specialist(int idNumber, String name, String address, String speciality) {
+        super(idNumber, name, address);
+        this.speciality = speciality;
+    }
+
+    public void display(){
+        super.display();
+        System.out.println("The Speciality is : "+speciality);
+    }
+}
+
+class NonSpecialist extends Doctor{
+
+    public NonSpecialist(int idNumber, String name, String address) {
+        super(idNumber, name, address);
+    }
+}
+/*
+                        Doctor
+       Specialist                   NonSpecialist
+ */
+public class HierarchicalDemo {
+    public static void main(String[] args) {
+
+        Specialist spObj=new Specialist(1001,"Mary King","New York","Cardiologist");
+        spObj.display();
+
+        NonSpecialist nspObj=new NonSpecialist(2001,"Navin Kumar","Mumbai");
+        nspObj.display();
+
+    }
+}
+
+
+
+
+
+
+ackage oopsdemo2;
+
+public class ShoppingCart extends Customer {
+
+    private String[] items;
+    private int itemCount;
+
+    public ShoppingCart(String name, String email) {
+        super(name, email);
+        items=new String[10]; //Max 10 items can be added to Cart
+        itemCount=0;
+    }
+
+    public void addItem(String item){
+        if(itemCount < items.length){
+            items[itemCount]=item; //Adding items to Array
+            itemCount++;
+            System.out.println(item+" Added to Cart");
+        }else {
+            System.out.println("Cart is Full. Cannot Add More Items.");
+        }
+    }
+
+    public void displayCart(){
+        System.out.println("Items in Cart: ");
+        for (int i = 0; i < itemCount; i++) {
+            System.out.println(items[i]);
+        }
+    }
+}
+-------------------------------------------------------------------
+
+package oopsdemo2;
+/*
+Java Program to demo Single Inheritance -  Customer --> ShoppingCart
+ */
+public class ShoppingApplication {
+    public static void main(String[] args) {
+
+        ShoppingCart cart=new ShoppingCart("Mary John","mary@wipro.com");
+
+        cart.addItem("Dell Laptop");
+        cart.addItem("Boat Headphone");
+        cart.addItem("Logitech Mouse");
+        cart.addItem("Photo Frame 4*6");
+
+        cart.display();
+        System.out.println("*********** Cart Details **************");
+        cart.displayCart();
+
+        System.out.println("--------------------------------------------------------------");
+
+        ShoppingCart cart1=new ShoppingCart("Rod Johnson","rod@wipro.com");
+        cart1.addItem("Dove Soap");
+        cart1.addItem("Clear Shampoo");
+        cart1.addItem("Olive Oil");
+
+
+        cart1.display();
+        System.out.println("*********** Cart Details **************");
+        cart1.displayCart();
+    }
+}
+
+
+
+
+
+
+package collectionsdemo;
+//Java Program to Create & Manage Array Lists
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class ArrayListDemo1 {
+
+    public static void main(String[] args) {
+
+        //Create a Generic ArrayList of Type String
+        ArrayList<String> languages=new ArrayList<>();
+
+        //Add elements into Arraylist as Objects. It maintains Order of Insertion
+        languages.add("Java");
+        languages.add("Perl");
+        languages.add("C++");
+        languages.add("C# 5.0");
+        languages.add("Java"); //Stores Duplicate ELements
+        languages.add("Python");
+        languages.add("Ruby");
+
+        //Display ArrayList contents as List
+        System.out.println("Programming languages Array List :"+languages);
+
+        System.out.println("Display Programming languages Array List using For Loop");
+        for (int i = 0; i < languages.size(); i++) {
+            System.out.print(languages.get(i)+"\t");
+        }
+        System.out.println();
+
+        //Access elements using get() method
+        System.out.println("Element at index 2 is :"+languages.get(2));
+
+        //manipulations
+        System.out.println("Does Arraylist contains element Java ? :"+languages.contains("java"));
+        System.out.println("Is Arraylist Empty ? :"+languages.isEmpty());
+        System.out.println("The Position of Python :"+languages.indexOf("Python"));
+        System.out.println("The Size of Languages ArrayList is : "+languages.size());
+
+        //Add elements at Specific Index
+        languages.add(3,"Oracle");
+        languages.set(7,"Linux"); //Update Arraylist
+        languages.remove(1); //Delete element from index 1
+
+        System.out.println("Programming languages Array List after Manipulations:"+languages);
+
+        System.out.println("----------------ArrayList to Store Marks-----------------------");
+
+        ArrayList<Integer> marks=new ArrayList<>();
+
+        marks.add(89);
+        marks.add(45);
+        marks.add(56);
+        marks.add(78);
+        marks.add(34);
+        marks.add(65);
+
+        //marks.add("Hello"); //Compilation Error - Type Safety
+
+        System.out.println("Marks ArrayList : "+marks);
+        System.out.println("Size of Marks ArrayList :"+marks.size());
+        System.out.println("Marks at 3rd Index :"+marks.get(3));
+
+        Collections.sort(marks); //Utility class Collections
+        System.out.println("Marks ArrayList after Sorting: "+marks);
+
+    }
+}
+
+
+
+
+
+
+
+
+package collectionsdemo;
+
+import java.util.Collections;
+import java.util.LinkedList;
+
+//Use Linked List for more Insert/Remove operations
+public class LinkedListDemo {
+    public static void main(String[] args) {
+
+        LinkedList<Double> stockPrices=new LinkedList<>();
+
+        //Linked list containing stock prices of a company for last 6 days
+        stockPrices.add(45.00);
+        stockPrices.add(51.00);
+        stockPrices.add(62.50);
+        stockPrices.add(42.75);
+        stockPrices.add(36.80);
+        stockPrices.add(69.40);
+
+        System.out.println(stockPrices);
+
+        //Collections Utility Class functions
+        Collections.sort(stockPrices);
+        System.out.println("Stock Prices after Sorting : "+stockPrices);
+
+        Collections.reverse(stockPrices);
+        System.out.println("Stock Prices Reversed :"+stockPrices);
+
+        System.out.println("Maximum Stock Price :"+Collections.max(stockPrices));
+        System.out.println("Minimum Stock Price :"+Collections.min(stockPrices));
+
+    }
+}
+
+
+
+
+
+
+
+
+package collectionsdemo;
+
+import java.util.*;
+
+public class HashsetManipulations {
+    public static void main(String[] args) {
+
+        Set<String> fruits = new HashSet<>();
+
+        //add example
+        fruits.add("Apple");
+        fruits.add("Banana");
+
+        //isEmpty example
+        System.out.println("fruits set is empty = "+fruits.isEmpty());
+
+        //contains example
+        System.out.println("fruits contains Apple = "+fruits.contains("Apple"));
+        System.out.println("fruits contains Mango = "+fruits.contains("Mango"));
+
+        //remove example
+        System.out.println("Apple removed from fruits set = "+fruits.remove("Apple"));
+        System.out.println("Mango removed from fruits set = "+fruits.remove("Mango"));
+
+        //size example
+        System.out.println("fruits set size = "+fruits.size());
+
+        //addAll example -
+        List<String> list = new ArrayList<>();
+        list.add("Apple"); list.add("Apple");
+        list.add("Banana"); list.add("Mango");
+
+        System.out.println("fruits set before addAll = "+fruits);
+        System.out.println("list = "+list);
+        fruits.addAll(list); //Adding List contents to Set - Interoperability
+        System.out.println("fruits set after addAll = "+fruits);
+
+        //iterator example
+        Iterator<String> iterator = fruits.iterator();
+        while(iterator.hasNext()){
+            System.out.println("Consuming fruit "+iterator.next());
+        }
+
+        System.out.println("HashSet fruits Contents :"+fruits);
+
+        //Create TreeSet from HashSet
+        TreeSet<String> fts=new TreeSet<>(fruits);
+
+        System.out.println("Hash Set Converted to TreeSet :"+fts);
+    }
+}
+
+
+
+
+
+
+
+package collectionsdemo;
+
+//Set which stores elements in Sorted order - No Duplicates & no null values
+
+import java.util.Comparator;
+import java.util.TreeSet;
+
+public class TreeSetDemo {
+    public static void main(String[] args) {
+
+        // Creating a TreeSet
+        TreeSet<String> fruits = new TreeSet<>();
+
+        // Adding new elements to a TreeSet
+        fruits.add("Banana");
+        fruits.add("Apple");
+        fruits.add("Pineapple");
+        fruits.add("Orange");
+
+        System.out.println("Fruits Set : " + fruits);
+
+        // Duplicate elements are ignored
+        fruits.add("Apple");
+        System.out.println("After adding duplicate element \"Apple\" : " + fruits);
+
+        // This will be allowed because it's in lowercase.
+        fruits.add("banana");
+        //fruits.add(null); //compiler error
+        System.out.println("After adding \"banana\" : " + fruits);
+
+        // TreeSet of Integer Type
+        TreeSet<Integer> tset2 = new TreeSet<Integer>();
+
+        // Adding elements to TreeSet<Integer>
+        tset2.add(88);
+        tset2.add(7);
+        tset2.add(101);
+        tset2.add(0);
+        tset2.add(3);
+        tset2.add(222);
+
+        System.out.println("Tree set in Ascending Order :"+tset2);
+
+        // tree set with custom comparator
+        TreeSet<Integer> tset3 = new TreeSet<>(Comparator.reverseOrder());
+
+        tset3.add(88);
+        tset3.add(7);
+        tset3.add(101);
+        tset3.add(0);
+        tset3.add(3);
+        tset3.add(222);
+
+        System.out.println("Tree set in Reverse Order:"+tset3);
+
+    }
+}
+
+
+
+
+
+
+
+
+package collectionsdemo;
+
+import java.util.*;
+
+//Map is a data structure , which stores data in key-value pairs
+public class HashMapDemo {
+    public static void main(String[] args) {
+
+        //Hashmap to store id & names of employees
+        HashMap<Integer,String> hmap=new HashMap<>();
+
+        //add element to map
+        hmap.put(12,"Ravi");
+        hmap.put(22,"Rahul");
+        hmap.put(7,"Singh");
+        hmap.put(49,"Annie");
+        hmap.put(3,"Amit");
+
+        Set s=hmap.entrySet(); //returns entry from Map
+        Set s1=hmap.keySet(); //Returns key
+
+        System.out.println("Entries : "+s);
+        System.out.println("Keys : "+s1);
+
+        //Traverse in hashmap using Map.Entry interface
+        for(Map.Entry<Integer,String> i:hmap.entrySet()){
+            System.out.println(i.getKey()+" - "+i.getValue());
+        }
+
+        System.out.println("*******************Key set **********");
+        Iterator itr1=s1.iterator();
+        while(itr1.hasNext())
+        {
+            Integer key=(Integer) itr1.next();
+            String value=hmap.get(key);
+            System.out.println(key+"---->"+value);
+            System.out.println("Display based on Key :"+hmap.get(key));
+        }
+
+        // get values based on key
+        String name=hmap.get(7);
+        System.out.println("The Name with key 7 is :"+name);
+
+        // remove values based on key
+        hmap.remove(2);
+        System.out.println(hmap);
+
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Enter Employee Id to be Searched: ");
+        Integer eid=scan.nextInt();
+
+        System.out.println("The Employee Id with "+eid+" is : "+hmap.get(eid));
+    }
+}
+
+
+
+package collectionsdemo;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class HashMapDemo2 {
+    public static void main(String[] args) {
+
+        //Map for Customer name & their Bank Balance
+        HashMap<String, Double> hm = new HashMap<>();
+
+        hm.put("John", 5000.50);
+        hm.put("Jim",  4200.22);
+        hm.put("Daisy", 6700.50);
+        hm.put("Jack", 140.21);
+        hm.put("Mike", 10000.90);
+
+        System.out.println("Display Customers & Balance Amount: ");
+        for(String k:hm.keySet())
+        {
+            System.out.println(k+"-->"+hm.get(k));
+        }
+
+        // deposit 1000 to Jim's Account- Update value
+        double bal=hm.get("Jim");
+        hm.put("Jim",bal+1000);
+        System.out.println("Jim's new Balance is :"+hm.get("Jim"));
+
+        hm.putIfAbsent("Raj", 500.00);
+
+        System.out.println(hm);
+
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter Customer Name for his Balance :");
+        String name=s.next();
+        System.out.println("The Balance of "+name+ " is :"+hm.get(name));
+    }
+}
+
+
+
+
+
+
+Codeshare logo
+ ShareSign UpLog In
+1
+package collectionsdemo;
+2
+​
+3
+import java.util.Comparator;
+4
+import java.util.TreeMap;
+5
+​
+6
+//Treemap Sorts entry based on keys
+7
+public class TreeMapDemo {
+8
+    public static void main(String[] args) {
+9
+10
+        TreeMap<String,String> fileExtensions=new TreeMap<>();
+11
+​
+12
+        // Adding new key-value pairs to a TreeMap
+13
+        fileExtensions.put("python", ".py");
+14
+        fileExtensions.put("c++", ".cpp");
+15
+        fileExtensions.put("kotlin", ".kt");
+16
+        fileExtensions.put("golang", ".go");
+17
+        fileExtensions.put("java", ".java");
+18
+​
+19
+        //Tree map will be sorted based on keys
+20
+        System.out.println(fileExtensions);
+21
+​
+22
+        TreeMap<String,String> fileExtensions1=new TreeMap<String,String>(Comparator.reverseOrder());
+23
+​
+24
+        // Adding new key-value pairs to a TreeMap
+25
+        fileExtensions1.put("python", ".py");
+26
+        fileExtensions1.put("c++", ".cpp");
+27
+        fileExtensions1.put("kotlin", ".kt");
+28
+        fileExtensions1.put("golang", ".go");
+29
+        fileExtensions1.put("java", ".java");
+30
+​
+31
+        //Tree map will be sorted based on keys in descending order
+32
+        System.out.println(fileExtensions1);
+33
+    }
+34
+}
+
+
+
+
+
+
+
+
+
+package collectionsdemo;
+
+import java.util.Comparator;
+import java.util.TreeMap;
+
+//Treemap Sorts entry based on keys
+public class TreeMapDemo {
+    public static void main(String[] args) {
+
+        TreeMap<String,String> fileExtensions=new TreeMap<>();
+
+        // Adding new key-value pairs to a TreeMap
+        fileExtensions.put("python", ".py");
+        fileExtensions.put("c++", ".cpp");
+        fileExtensions.put("kotlin", ".kt");
+        fileExtensions.put("golang", ".go");
+        fileExtensions.put("java", ".java");
+
+        //Tree map will be sorted based on keys
+        System.out.println(fileExtensions);
+
+        TreeMap<String,String> fileExtensions1=new TreeMap<String,String>(Comparator.reverseOrder());
+
+        // Adding new key-value pairs to a TreeMap
+        fileExtensions1.put("python", ".py");
+        fileExtensions1.put("c++", ".cpp");
+        fileExtensions1.put("kotlin", ".kt");
+        fileExtensions1.put("golang", ".go");
+        fileExtensions1.put("java", ".java");
+
+        //Tree map will be sorted based on keys in descending order
+        System.out.println(fileExtensions1);
+    }
+}
+
+
+
+
+
+
+
+
+package collectionsdemo;
+
+import java.util.Comparator;
+import java.util.TreeMap;
+
+//Treemap Sorts entry based on keys
+public class TreeMapDemo {
+    public static void main(String[] args) {
+
+        TreeMap<String,String> fileExtensions=new TreeMap<>();
+
+        // Adding new key-value pairs to a TreeMap
+        fileExtensions.put("python", ".py");
+        fileExtensions.put("c++", ".cpp");
+        fileExtensions.put("kotlin", ".kt");
+        fileExtensions.put("golang", ".go");
+        fileExtensions.put("java", ".java");
+
+        //Tree map will be sorted based on keys
+        System.out.println(fileExtensions);
+
+        TreeMap<String,String> fileExtensions1=new TreeMap<String,String>(Comparator.reverseOrder());
+
+        // Adding new key-value pairs to a TreeMap
+        fileExtensions1.put("python", ".py");
+        fileExtensions1.put("c++", ".cpp");
+        fileExtensions1.put("kotlin", ".kt");
+        fileExtensions1.put("golang", ".go");
+        fileExtensions1.put("java", ".java");
+
+        //Tree map will be sorted based on keys in descending order
+        System.out.println(fileExtensions1);
+    }
+}
+
+

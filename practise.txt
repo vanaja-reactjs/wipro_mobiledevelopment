@@ -1,0 +1,70 @@
+[12:32 PM] Sravya (Unverified)
+Reverse a String:
+
+Write a Java function to reverse a given string.Example:
+ 
+
+
+Input: "hello"
+
+Output: "olleh"
+ 
+Anagram Detection:
+
+Write a Java function to determine if two strings are anagrams of each other.Example:
+ 
+Input: "listen", "silent"
+
+Output: true
+ 
+String Compression:
+
+Write a Java function to perform basic string compression using the counts of repeated characters. For example, the string "aabbbccc" would become "a2b3c3". If the compressed string would not become smaller than the original string, your method should return the original string. You can assume the string has only uppercase and lowercase letters (a-z).Example:
+ 
+Input: "aabbbccc"
+
+Output: "a2b3c3"
+
+Longest Substring Without Repeating Characters:
+
+Write a Java function to find the length of the longest substring without repeating characters.Example:
+ 
+ 
+Input: "abcabcbb"
+
+Output: 3 (for "abc")
+ like 2
+[12:36 PM] Sravya (Unverified)
+Remove Duplicates from List:
+
+Write a Java program to remove duplicates from a list while preserving the order of elements.Example:
+ 
+Input: [1, 2, 3, 2, 4, 5, 1]
+
+Output: [1, 2, 3, 4, 5]
+ 
+Frequency of Characters in String:
+
+Write a Java program to count the frequency of characters in a given string and store the result in a map.Example:
+ 
+Input: "hello"
+
+Output: {'h': 1, 'e': 1, 'l': 2, 'o': 1}
+ 
+Intersection of Two Lists:
+
+Write a Java program to find the intersection of two lists.Example:
+ 
+Input: [1, 2, 3, 4], [3, 4, 5, 6]
+
+Output: [3, 4]
+ 
+Check for Anagrams in Set:
+
+Write a Java program to check if two strings are anagrams or not using sets.Example:
+ 
+ 
+Input: "listen", "silent"
+
+Output: true
+ like 1

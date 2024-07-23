@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".RenewActivity">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Policy number"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/Policynum"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/Policynum"
+        android:layout_width="275dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radiogroup" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Engine number"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/Enginum"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/Enginum"
+        android:layout_width="276dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="12dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Policynum"
+        tools:ignore="MissingConstraints" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radiogroup"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="26dp"
+
+        tools:ignore="MissingConstraints" >
+
+    <RadioButton
+        android:id="@+id/radioCar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Car"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="1dp"
+        android:checked="false"
+        tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/radioBike"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="100dp"
+            android:checked="false"
+            android:text="Bike"
+            android:textSize="24sp"
+
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="209dp"
+            tools:layout_editor_absoluteY="73dp" /></RadioGroup>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Vehicle number"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/numvehicle"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/numvehicle"
+        android:layout_width="285dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Enginum"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="amount to pay"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/payamount"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/payamount"
+        android:layout_width="291dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.248"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numvehicle"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/submitbtn"
+        android:layout_width="260dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="44dp"
+        android:text="Submit"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/payamount"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="44dp" />
+
+    <Button
+        android:id="@+id/backbtn"
+        android:layout_width="267dp"
+        android:layout_height="69dp"
+        android:text="Back"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/backbtn"
+        app:layout_constraintTop_toBottomOf="@id/submitbtn"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="37dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,71 @@
+BDD for simple calculator operations
+
+Scenario 1:Addition
+
+1.Given I have entered numbers A and B into the calculator
+2.when I press the add button
+3.then the calculator should display the sum of A and B
+
+
+Scenario 2: Subtraction
+
+1.Given I have entered numbers A and B into the calculator
+2.when I press the subtract button
+3.then the calculator should display the result of subtracting b from A
+
+Scenario 3:  Multiplication
+
+1.Given I have entered numbers A and B into the calculator
+2.when I press the Multiply button
+3.then the calculator should display the product of A and B
+
+   
+Scenario 4: Division
+
+1.Given I have entered numbers A and B into the calculator
+2.And B is not Zero
+3.when I press the divide button
+4.then the calculator should display the result of dividing A by B
+
+
+example :
+ Scenario 1:Addition(A=10,B=5)
+
+1.Given I have entered numbers 10 and 5 into the calculator
+2.when I press the add button
+3.then the calculator should display the sum of 10 and 5(expected :15)
+
+scenario 2: Subtraction(A=10,B=5)
+
+
+1.Given I have entered numbers 10 and 5 into the calculator
+2.when I press the subtract button
+3.then the calculator should display the result of subtracting  5 from 10(expected :5)
+
+
+scenario 3: Multiplication(A=10,B=5)
+
+
+1.Given I have entered numbers 10 and 5 into the calculator
+2.when I press the multiply button
+3.then the calculator should display the product of 10 and 5(expected :50)
+
+scenario 4: Division
+
+
+1.Given I have entered numbers 10 and 5 into the calculator
+2.when I press the divide button
+3.then the calculator should display the  of 10 by 5(expected :2)
+
+
+
+scenario 1: Addition
+
+add(int A , int B)
+    return A+B
+
+scenario 2: Subtraction
+
+
+
+
