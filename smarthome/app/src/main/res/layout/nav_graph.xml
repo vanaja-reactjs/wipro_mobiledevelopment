@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.smarthome.MainActivity"
+        android:label="Main Activity"
+        tools:layout="@layout/main"
+        tools:ignore="Instantiatable">
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.smarthome.SettingActivity"
+        android:label="Settings"
+        tools:layout="@layout/activity_setting"
+        tools:ignore="Instantiatable" />
+</navigation>

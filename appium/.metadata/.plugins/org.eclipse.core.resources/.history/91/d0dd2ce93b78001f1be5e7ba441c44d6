@@ -1,0 +1,58 @@
+package tests;
+
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.android.AndroidDriver;
+import junit.framework.Assert;
+
+public class ProductSearch {
+	AndroidDriver driver;
+	@SuppressWarnings("deprecation")
+	@BeforeClass
+	public void setUp() throws MalformedURLException {
+	DesiredCapabilities cap=new DesiredCapabilities();
+	cap.setCapability("platformName", "Android");
+	cap.setCapability("deviceName", "motorola moto g54 5G");
+	cap.setCapability("automationName","uiautomator2");
+	cap.setCapability("appPackage","com.alieser.libraryproject");
+	cap.setCapability("appActivity", "com.alieser.libraryproject.ui.view.login.LoginActivity");
+	
+	URL url=URI.create("http://127.0.0.1:4723/").toURL();
+	driver=new AndroidDriver(url,cap);
+	System.out.println("app launched successfully");
+	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+	}
+	public void login() {
+	WebElement signinuser=driver.findElement(By.xpath("//android.widget.EditText[@resource-id=\"com.alieser.libraryproject:id/etUserName\"]"));
+	//signinuser.click();
+	signinuser.sendKeys("alieser@gmail.com");
+	WebElement signinpass=driver.findElement(By.xpath("//android.widget.EditText[@resource-id=\"com.alieser.libraryproject:id/etPassword\"]"));
+	//signinpass.click();
+    signinpass.sendKeys("alieser");
+	WebElement signin=driver.findElement(By.xpath("//android.widget.Button[@resource-id=\"com.alieser.libraryproject:id/btnSignin\"]"));
+	signin.click();
+	}
+	
+	
+	@Test
+	public void searchBar() {
+		WebElement search=driver.findElement(By.xpath("//android.widget.LinearLayout[@resource-id=\"com.alieser.libraryproject:id/search_bar\"]"));
+		search.click();
+		search.sendKeys("laptop");
+		//validation
+		
+		WebElement result=driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"com.alieser.libraryproject:id/cvProductRow\"]/android.view.ViewGroup"));
+		Assert.assertTrue(result.isDisplayed());
+		System.out.println("laptop displayed");
+		
+	}
+}

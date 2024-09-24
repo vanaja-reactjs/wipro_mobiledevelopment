@@ -1,0 +1,40 @@
+package tests;
+
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.android.AndroidDriver;
+import junit.framework.Assert;
+
+public class ProductSearch extends EcommLunch{
+	
+	@Test
+	public void searchBar() throws MalformedURLException {
+		
+		WebElement product=driver.findElement(By.xpath("(//android.widget.FrameLayout[@resource-id=\"com.alieser.libraryproject:id/cvProductRow\"])[1]/android.view.ViewGroup"));
+		Assert.assertTrue(product.isDisplayed());
+		
+		WebElement addbus=driver.findElement(By.xpath("(//android.widget.Button[@resource-id=\"com.alieser.libraryproject:id/btnAddToBasketProductRow\"])[1]"));
+		addbus.click();
+		
+		
+		WebElement btnic=driver.findElement(By.xpath("(//android.widget.ImageView[@resource-id=\"com.alieser.libraryproject:id/navigation_bar_item_icon_view\"])[3]"));
+		btnic.click();
+		System.out.println("navigated to cart page");
+		WebElement item=driver.findElement(By.xpath("//androidx.recyclerview.widget.RecyclerView[@resource-id=\"com.alieser.libraryproject:id/rcvMyBasket\"]"));
+		Assert.assertTrue(item.isDisplayed());
+		
+		WebElement conf=driver.findElement(By.xpath("//android.widget.Button[@resource-id=\"com.alieser.libraryproject:id/btnOrderConfirmation\"]"));
+		conf.click();
+		System.out.println("confirm button clicked");
+		
+	}
+}

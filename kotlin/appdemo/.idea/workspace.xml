@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="63b8cfb0-2b2f-4812-adf1-dbc6218b2051" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../demo/app/src/main/java/com/example/demo/FirstActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/app/src/main/java/com/example/demo/SecondActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/app/src/main/res/layout/activity_first.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/app/src/main/res/layout/activity_second.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Finance/src/Co1.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IMS/src/DataBases.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IMS/src/IventoryItem.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../co1.kt/src/main/kotlin/co1.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../coroutines/src/main/kotlin/Co2.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../coroutines/src/main/kotlin/co1.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../smarthome/app/src/main/java/com/example/smarthome/ApiService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../smarthome/app/src/main/java/com/example/smarthome/AutomationWorker.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../smarthome/app/src/main/java/com/example/smarthome/MainViewModal.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../smarthome/app/src/main/java/com/example/smarthome/RetrofitClient.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../smarthome/app/src/main/java/com/example/smarthome/SettingActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../smarthome/app/src/main/java/com/example/smarthome/SyncWorker.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../smarthome/app/src/main/res/layout/activity_setting.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../smarthome/app/src/main/res/layout/dashboard_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../smarthome/app/src/main/res/layout/main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../smarthome/app/src/main/res/layout/nav_graph.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../democar/app/.idea/other.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../democar/app/.idea/other.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../shellpractise" beforeDir="false" afterPath="$PROJECT_DIR$/../../shellpractise" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2mCtwvXkQYmRymEC243ek6Wzc4m" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/kandr/Desktop/training/kotlin/appdemo/src/main/kotlin/Main.kt"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="63b8cfb0-2b2f-4812-adf1-dbc6218b2051" name="Changes" comment="" />
+      <created>1726592628321</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726592628321</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/Main.kt</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

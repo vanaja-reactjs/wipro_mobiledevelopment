@@ -1,0 +1,42 @@
+package tests;
+
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.android.AndroidDriver;
+
+public class EcommLunch {
+
+	public static void main(String[] args) throws MalformedURLException {
+		// TODO Auto-generated method stub
+		DesiredCapabilities cap=new DesiredCapabilities();
+		cap.setCapability("platformName", "Android");
+		cap.setCapability("deviceName", "Pixel 2");
+		cap.setCapability("automationName","uiautomator2");
+		cap.setCapability("appPackage","com.alieser.libraryproject");
+		cap.setCapability("appActivity", "com.alieser.libraryproject.ui.view.login.LoginActivity");
+		
+		URL url=URI.create("http://127.0.0.1:4723/").toURL();
+		AndroidDriver driver=new AndroidDriver(url,cap);
+		System.out.println("app launched successfully");
+		
+		WebElement user=driver.findElement(By.id("com.alieser.libraryproject:id/etUserName"));
+		/*user.click();
+		user.sendKeys("alieser@gmail.com");*/
+		
+		WebElement pass=driver.findElement(By.id("com.alieser.libraryproject:id/etPassword"));
+		/*pass.click();
+		pass.sendKeys("alieser");*/
+		WebElement signin=driver.findElement(By.id("com.alieser.libraryproject:id/btnSignin"));
+		signin.click();
+		driver.quit();
+		
+
+	}
+
+}
