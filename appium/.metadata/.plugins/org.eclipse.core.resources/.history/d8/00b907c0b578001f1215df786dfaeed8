@@ -1,0 +1,32 @@
+package tests;
+
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.android.AndroidDriver;
+
+public class Lunchapp {
+	AndroidDriver driver;
+	public void setUp() throws MalformedURLException {
+	DesiredCapabilities cap=new DesiredCapabilities();
+	cap.setCapability("platformName", "Android");
+	cap.setCapability("deviceName", "motorola moto g54 5G");
+	cap.setCapability("automationName","uiautomator2");
+	cap.setCapability("appPackage","com.example.fooddeliveryapp");
+	cap.setCapability("appActivity", "com.example.fooddeliveryapp.MainActivity");
+	
+	URL url=URI.create("http://127.0.0.1:4723/").toURL();
+	driver=new AndroidDriver(url,cap);
+	System.out.println("app launched successfully");
+	}
+	public void tearDown() {
+		if(driver!=null) {
+			driver.quit();
+		}
+	}
+	
+
+}

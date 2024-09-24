@@ -1,0 +1,44 @@
+package demoapp;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.android.AndroidDriver;
+//import io.appium.java_client.android.AndroidElement;
+
+public class Apkinstall {
+
+    public static void main(String[] args) {
+        try {
+            // Set up DesiredCapabilities
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability("platformName", "Android");
+            capabilities.setCapability("deviceName", "Pixel5");
+            capabilities.setCapability("automationName", "uiautomator2");
+            capabilities.setCapability("app", "C:\\Users\\kandr\\Desktop\\appium\\apkfiles\\ApiDemos-debug.apk");
+            // Note: Remove platformVersion capability if using newer Appium versions
+            // capabilities.setCapability("platformVersion", "14");
+
+            // Initialize AndroidDriver
+            URL url = new URL("http://127.0.0.1:4723/");
+            AndroidDriver driver = new AndroidDriver(url, capabilities);
+
+            // Wait for a few seconds to ensure the app starts
+            Thread.sleep(2000);
+            System.out.println("App started successfully");
+
+            // Perform any additional actions here, e.g., navigating within the app
+
+            // Quit the driver
+            driver.quit();
+
+        } catch (MalformedURLException e) {
+            System.err.println("The URL provided is malformed: " + e.getMessage());
+        } catch (InterruptedException e) {
+            System.err.println("The thread was interrupted: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("An unexpected error occurred: " + e.getMessage());
+        }
+    }
+}

@@ -1,0 +1,33 @@
+package tests;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+import java.net.*;
+
+//import com.google.common.collect.ImmutableMap;
+
+//import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
+//import io.appium.java_client.remote.MobileCapabilityType;
+//import io.appium.java_client.remote.MobilePlatform;
+
+public class Baseclass{
+	public static void main(String[] args) throws MalformedURLException {
+		//try {
+			
+		DesiredCapabilities cap=new DesiredCapabilities();
+		cap.setCapability("platformName","Android");
+		cap.setCapability("deviceName", "Pixel 2");
+		cap.setCapability("automationName", "uiautomator2");
+		cap.setCapability("ignoreHiddenApiPolicyError", true);
+		cap.setCapability("appPackage","com.example.fooddeliveryapp");
+		cap.setCapability("appActivity","com.example.fooddeliveryapp.MainActivity");
+		cap.setCapability("platformVersion","11");		
+		URL url=URI.create("http://127.0.0.1:4725").toURL()	;
+		AndroidDriver driver=new AndroidDriver(url,cap);
+		
+		driver.quit();
+	}
+		/* catch (Exception e) {
+	            e.printStackTrace();
+	        }*/
+	}
